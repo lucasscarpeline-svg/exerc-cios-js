@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+   <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+       .container{
+            display: grid;
+            grid-template-areas: 
+            'header header header'
+            'anside section section'
+            'footer footer footer'
+            ;
+            row-gap: 10px;
+            column-gap: 30px;
+            grid-auto-rows: 150px 350px 100px;
+            }
+            header{
+               grid-area: header;
+               background-color: aquamarine;
+            }
+            aside{
+                grid-area: aside;
+                background-color: blueviolet;
+            }
+            section{
+                   grid-area: section;
+                   background-color: greenyellow;
+            }
+            footer{
+               grid-area: footer;
+               background-color: violet;
+            }          
+            
+</style>
+
+<body>
+   <div class="container">
+            <header>HOME</header>
+            <aside>MENU</aside>
+            <section>ARTIGO 1</section>
+            <footer>RODAPÉ</footer>
+ 
+        </div> / /
+</body>
+</html>
