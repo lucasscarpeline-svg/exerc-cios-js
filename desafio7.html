@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bloco {
+            padding: 10px;
+            background-color: gray;
+            width: 30%;
+            margin: auto;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .bloco input {
+            margin: 10px auto;
+            width: 95%;
+            padding: 10px;
+        }
+
+        .bloco button {
+            padding: 10px;
+            width: 32%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bloco">
+        <h1>Desafio 6</h1>
+        <input type="text" id="entrada" placeholder="Digite o valor de entrada" onkeydown="teclaEnter()"><br>
+        <button onclick="adicionarValor()">Adicionar</button>
+        <button onclick="ordenarValor()">Ordenar</button>
+        <button onclick="deletarValor()">Deletar</button>
+        <input type="textarea" id="saida" disabled="disabled">
+    </div>
+    <script>
+        var lista = []
+
+        function adicionarValor() {
+            var ent = document.getElementById('entrada').value;
+            lista.unshift(ent);
+            document.getElementById('saida').value = lista;
+            document.getElementById('entrada').value = null;
+        }
+
+        function ordenarValor() {
+            lista.sort();
+            document.getElementById('saida').value = lista;
+        }
+
+        function deletarValor() {
+            var ent = document.getElementById('entrada').value;
+            var loc = lista.indexOf(ent);
+            lista.splice(loc, 1);
+            document.getElementById('entrada').value = null;
+            document.getElementById('saida').value = lista;
+        }
+
+        function teclaEnter() {
+            var tecla = event.keyCode;
+            if (tecla == 13) {
+                adicionarValor();
+            }
+        }
+    </script>
+</body>
+
+</html>
