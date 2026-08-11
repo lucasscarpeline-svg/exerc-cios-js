@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores por ID</title>
+</head>
+<body>
+    <input type="text" id="entrada" onkeyup="mostarvalor()">
+    <input type="text" id="saída" disabled="disabled">
+    <script>
+        function mostarvalor(){
+            //capturando o valor
+        var texto = document.getElementById('entrada').value;
+        //enviando o valor
+        document.getElementById('saída').value = texto; 
+        }
+    </script>
+</body>
+</html>

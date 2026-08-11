@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício3 - Grid</title>
+</head>
+     
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+         .container{
+                 display: grid;
+                 grid-template-columns: repeat(3,1fr);
+                 grid-template-rows: 80px 200px 100px 80px;
+                 gap: 15px;
+                 background-color: #22252c;
+                 padding: 20px;
+                 border-radius: 4px;
+         }
+
+         .topo{
+        background-color: #ffaa64;
+        grid-column: 1 / 4;
+        grid-row: 1;
+        }
+  
+          .lateral{
+              background-color: #00a877;
+              grid-column: 1;
+              grid-row: 2 / 4;
+        }
+
+           .centro{
+                background-color: #3ddcb4;
+                grid-column: 2 / 4;
+                grid-row: 2;
+           }
+          
+            .vermelho{
+                background-color: #ff6860;
+                grid-column: 2;
+                grid-row: 3;
+            }
+    
+             .laranja-baixo{
+                background-color: #ffaa64;
+                grid-column: 3;
+                grid-row: 3;
+             }
+        
+            .marrom{
+                 background-color: #956c53;
+                grid-column: 1/4;
+                grid-row: 4;
+            }
+
+</style>
+<body>
+    <link rel="stylesheet" href="css/estilo-grid.css">  
+    <div class="container">
+        <div class="topo">Topo</div>
+        <div class="lateral">Lateral</div>
+        <div class="centro">Centro</div>
+        <div class="vermelho">Vermelho</div>
+        <div class="laranja-baixo">Laranja Baixo</div>
+        <div class="marrom">Marrom</div>
+    </div>
+</body>
+</html>
+
+    
+</body>
+</html>
